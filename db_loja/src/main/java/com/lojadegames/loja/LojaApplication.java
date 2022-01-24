@@ -1,12 +1,13 @@
-package org.generation.blogPessoal;
+package com.lojadegames.loja;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogPessoalApplication {
+public class LojaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlogPessoalApplication.class, args);
+		SpringApplication.run(LojaApplication.class, args);
 	}
+
 }
