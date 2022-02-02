@@ -1,5 +1,6 @@
 package org.generation.blogPessoal.seguranca;
 
+
 import java.util.Optional;
 
 import org.generation.blogPessoal.model.Usuario;
@@ -10,16 +11,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+
 @Service
-class UserDetailsServiceImpl implements UserDetailsService{
-	
+public class UserDetailsServiceImpl implements UserDetailsService {
+
 	@Autowired
 	private UsuarioRepository userRepository;
-	
+
 	@Override
-	public UserDetails loadUserByUsername(String UserName) throws UsernameNotFoundException {
-		Optional<Usuario> user = userRepository.findByUsuario(UserName);
-		user.orElseThrow(() -> new UsernameNotFoundException("User Name: " + UserName + "Not Found!"));
-		return user.map(UserDetailsImpl::new).get();
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+
+		Optional<Usuario> usuario = userRepository.findByUsuario(userName);
+		usuario.orElseThrow(() -> new UsernameNotFoundException(userName + " not found."));
+
+		return usuario.map(UserDetailsImpl::new).get();
 	}
 }
