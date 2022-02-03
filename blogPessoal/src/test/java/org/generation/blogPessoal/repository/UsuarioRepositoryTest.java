@@ -30,17 +30,16 @@ public class UsuarioRepositoryTest {
 		
 		usuarioRepository.save(new Usuario(0L, "Manuela da berto", "manuela@email.com.br", "13465278"));
 		
-		usuarioRepository.save(new Usuario(0L, "Adriana da berto", "adriana@email.com.br", "13465278"));
+		usuarioRepository.save(new Usuario(0L, "deyky berto", "deyky@email.com.br", "13465278"));
 
-        usuarioRepository.save(new Usuario(0L, "Paulo Antunes", "demikael", "13465278"));
 	}
 	
 	@Test
 	@DisplayName("Retorna 1 usuario")
 	public void deveRetornarUmUsuario() {
 
-		Optional<Usuario> usuario = usuarioRepository.findByUsuario("demikael");
-		assertTrue(usuario.get().getUsuario().equals("demikael"));
+		Optional<Usuario> usuario = usuarioRepository.findByUsuario("deyky@email.com.br");
+		assertTrue(usuario.get().getUsuario().equals("deyky@email.com.br"));
 	}
 	
 	@Test
@@ -51,6 +50,6 @@ public class UsuarioRepositoryTest {
 		assertEquals(3, listaDeUsuarios.size());
 		assertTrue(listaDeUsuarios.get(0).getNome().equals("João da berto"));
 		assertTrue(listaDeUsuarios.get(1).getNome().equals("Manuela da berto"));
-		assertTrue(listaDeUsuarios.get(2).getNome().equals("Adriana da berto"));
+		assertTrue(listaDeUsuarios.get(2).getNome().equals("deyky berto"));
 	}
 }
