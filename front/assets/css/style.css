@@ -1,0 +1,41 @@
+/*
+	Estilos  da pagina index.html
+*/
+.center {
+	text-align: center
+}
+
+.container {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+#menu li {
+	display: inline;
+	text-decoration: none;
+	padding: 1%;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#menu li a:hover {
+	color: #1f1d1d;
+}
+
+.tm-social{
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+
+.ml-50x{
+	margin-left: 50px;
+}
+
+/*
+	Estilos  da pagina contato.html
+*/
