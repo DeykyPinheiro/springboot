@@ -60,7 +60,7 @@ public class UsuarioController {
 			.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
 	}
 	
-	@PutMapping("/atualiz ar")
+	@PutMapping("/atualizar")
 	public ResponseEntity<Usuario> putUsuario(@Valid @RequestBody Usuario usuario){
 		
 		return usuarioService.atualizarUsuario(usuario)
